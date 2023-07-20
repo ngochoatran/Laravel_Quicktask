@@ -21,10 +21,13 @@ class User extends Authenticatable
         'first_name',
         'last_name',
         'username',
-        'is_admin',
-        'is_active',
         'email',
         'password',
+    ];
+    
+    protected $guarded = [
+        'is_admin',
+        'is_active'
     ];
 
     public function Task()
