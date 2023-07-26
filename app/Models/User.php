@@ -23,17 +23,9 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
-    ];
-    
-    protected $guarded = [
         'is_admin',
         'is_active'
     ];
-
-    // public function Task()
-    // {
-    //     return $this->hasMany(Task::class);
-    // }
 
     /**
      * The attributes that should be hidden for serialization.
