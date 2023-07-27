@@ -24,15 +24,10 @@ class User extends Authenticatable
         'email',
         'password',
         'is_admin',
-        'is_active'
-    ];
-    
-    protected $guarded = [
-        'is_admin',
-        'is_active'
+        'is_active',
     ];
 
-    public function Task()
+    public function tasks()
     {
         return $this->hasMany(Task::class);
     }
