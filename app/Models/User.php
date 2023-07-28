@@ -45,7 +45,6 @@ class User extends Authenticatable
         $this->attributes['username'] = Str::slug($value);
     }
 
-
     /**
      * The attributes that should be hidden for serialization.
      *
