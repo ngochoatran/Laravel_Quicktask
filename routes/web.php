@@ -27,6 +27,11 @@ Route::get('tasks/{task}/edit', [TaskController::class, 'edit'])->name('tasks.ed
 Route::put('tasks/{task}', [TaskController::class, 'update'])->name('tasks.update');
 Route::delete('tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy');
 
+// CheckAdmin
+Route::group(['middleware' => 'admin'], function () {
+    Route::resource('users', UserController::class);
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
